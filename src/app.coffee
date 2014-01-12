@@ -4,16 +4,13 @@
 #<< gui
 #<< server_side_adapter
 #<< glue
-
 class App
   constructor: ->
-    useCase      = new UseCase()
-    gui          = new Gui()
-    serverSideAdapter = new serverSideAdapter()
-    glue         = new Glue(useCase, gui, serverSideAdapter)
-    
-    useCase.start()
+    useCase = new UseCase()
     window.useCase = useCase
+    gui = new Gui()
+    serverSideAdapter = new ServerSideAdapter()
+    glue = new Glue(useCase, gui, serverSideAdapter)
+    useCase.start()
 
 new App()
-

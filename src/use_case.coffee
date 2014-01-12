@@ -1,14 +1,17 @@
 class UseCase
-  constructor: ->
-    @persons = []
+	constructor: ->
+		console.log("UseCase.constructor")
+		@persons = []
     
-  start: =>
-    @getPersonsList()
+	start: =>
+		console.log("UseCase.start")
+		@getPersonsList()
 
-  getPersonsList: =>
-
-  setPersonsList: (list) =>
-    @persons = list
+	getPersonsList: =>
+		console.log("UseCase.getPersonsList")
+	setPersonsList: (list) =>
+		console.log("UseCase.setPersonsList")
+		@persons = list
 
 class Person
-  constructor: (@name, @surname) ->
+	constructor: (@name, @surname) ->
