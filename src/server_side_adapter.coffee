@@ -5,7 +5,7 @@ class ServerSideAdapter
 		console.log("serverSideAdapter.loadPersonsList")
 		$.ajax(
 			type: "GET"
-			url: "http://localhost:3000/people.json"
+			url: "http://simple-backend.shellyapp.com/people.json"
 			success: (listJson) =>
 				@jsonPersonsListLoaded(listJson)
 			error: => 
