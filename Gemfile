@@ -1,2 +1,4 @@
-source :rubygems
+source 'https://rubygems.org'
 gem 'rack'
+gem 'thin'
+gem 'rake'
